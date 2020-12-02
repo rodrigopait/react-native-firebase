@@ -3,7 +3,8 @@ import React, { useState, useEffect } from 'react'
 import { Button, Text, View } from 'react-native'
 import { ScrollView } from 'react-native-gesture-handler'
 import firebase from '../database/firebase'
-import { ListItem, Avatar } from 'react-native-elements'
+import { ListItem, } from 'react-native-elements'
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 
 const UserList = (props) => {
@@ -36,7 +37,9 @@ const UserList = (props) => {
 							userId: user.id
 						})}>
 							<ListItem.Chevron />
-							<Avatar source={{ uri: 'https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg' }} rounded />
+							<Icon
+								name='user'
+								size={30} />
 							<ListItem.Content>
 								<ListItem.Title>{user.name}</ListItem.Title>
 								<ListItem.Subtitle>{user.email}</ListItem.Subtitle>
